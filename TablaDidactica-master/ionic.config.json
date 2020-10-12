@@ -1,0 +1,8 @@
+{
+  "name": "TablaDidactica",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}

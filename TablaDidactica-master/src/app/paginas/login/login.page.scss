@@ -1,0 +1,33 @@
+.fondo{
+    --background:url('../../../assets/login.jpg');
+
+  
+  }
+  .cabecera{
+
+    --background:rgb(41, 182, 135);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo{
+    
+     // background: url(../../../assets/img/animales.png);
+     border-radius: 100%;
+     background-color: white;
+    -webkit-box-shadow: 10px 10px 15px -4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 15px -4px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 15px -4px rgba(0,0,0,0.75);
+  }
+  .spiner{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+    width: 100%;
+    height: 3rem;
+    position: absolute; 
+    z-index: 999; 
+  }

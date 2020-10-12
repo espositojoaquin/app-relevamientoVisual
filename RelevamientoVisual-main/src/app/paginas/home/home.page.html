@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-button slot="end" fill="clear" (click)="presentActionSheet()">
+      <ion-icon style="color: aliceblue" name="menu"></ion-icon>
+    </ion-button>
+    <ion-title>
+      Relevamiento Visual
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content style="height: 100%;">
+
+  <div class="card" style="width: 100%; background-color:rgb(18, 173, 18) ;">
+    <h2>Cosas Lindas</h2>
+    <div (click)="tomarFoto(0)" class="col test" style="background-color: rgb(18, 173, 18);">
+      
+      <div >
+        <img  src="../../assets/linda.png" alt="">
+      </div>
+
+    </div> 
+  </div>
+
+  <div class="card" style="width: 100%; background-color: red;">
+    <h2>Cosas Feas</h2>
+    <div id="fea" (click)="tomarFoto(1)" class="col test" style="background-color: red;">
+           
+      <div >
+        <img src="../../assets/fea.png" alt="">
+      </div>
+
+    </div> 
+  </div>
+   
+    <!-- <ion-item-divider></ion-item-divider> -->
+    <!-- <ion-label>
+      <h2><b>Cosas Feas</b></h2>
+    </ion-label>
+    <ion-item class="test" lines="none">
+      <ion-button class="marks-buttons" color="tertiary" expand="block" (click)="tomarFoto(1)">
+        <img src="../../assets/fea.png" alt="">
+      </ion-button>
+    </ion-item> -->
+
+  
+
+  <!-- </ion-list> -->
+
+ 
+</ion-content>

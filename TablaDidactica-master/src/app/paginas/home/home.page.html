@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-toolbar class="prueba">
+    <ion-button slot="end" fill="clear" (click)="logOut()">
+      <ion-icon style="color: aliceblue" name="log-out"></ion-icon>
+    </ion-button>
+    <ion-title *ngIf="idioma==0">
+      Tabla didáctica
+    </ion-title>
+    <ion-title *ngIf="idioma==1">
+      Didactic board
+    </ion-title>
+    <ion-title *ngIf="idioma==2">
+      Quadro didático
+    </ion-title>
+  </ion-toolbar>
+  
+</ion-header>
+<ion-content class="content-with-full-height fondo" >
+
+      <div class="contImage prueba">
+        <div class="test"  lines="none" *ngFor="let item of list" (click)="reproducir(item)">
+         
+          <img class="item-img contenido" [src]="item.imagen" alt="">
+        </div>
+  
+      </div>
+
+  <ion-fab id="f-boton-idioma" horizontal="start" vertical="bottom" slot="fixed">
+    <ion-fab-button color="secondary">
+      <img id="img-temas" src="../../assets/temas.png" alt="">
+    </ion-fab-button>
+    <ion-fab-list side="top">
+      <ion-fab-button color="light" (click)="cambiarTipo(0)">
+        <img class="img-tipo" src="../../assets/colores/colores.png" alt="">
+      </ion-fab-button>
+      <ion-fab-button color="light" (click)="cambiarTipo(1)">
+        <img class="img-tipo" src="../../assets/animales/animales.png" alt="">
+      </ion-fab-button>
+      <ion-fab-button color="light" (click)="cambiarTipo(2)">
+        <img class="img-tipo" src="../../assets/numeros/numeros.png" alt="">
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+
+  <ion-fab id="f-boton-idioma" horizontal="end" vertical="bottom" slot="fixed">
+    <ion-fab-button color="secondary">
+      <img *ngIf="idioma==0" src="../../assets/banderas/es.png" alt="">
+      <img *ngIf="idioma==1" src="../../assets/banderas/en.png" alt="">
+      <img *ngIf="idioma==2" src="../../assets/banderas/pr.png" alt="">
+    </ion-fab-button>
+    <ion-fab-list side="top">
+      <ion-fab-button color="light" (click)="cambiarIdioma(0)">
+        <img class="img-tipo" src="../../assets/banderas/es.png" alt="">
+      </ion-fab-button>
+      <ion-fab-button color="light" (click)="cambiarIdioma(1)">
+        <img class="img-tipo" src="../../assets/banderas/en.png" alt="">
+      </ion-fab-button>
+      <ion-fab-button color="light" (click)="cambiarIdioma(2)">
+        <img class="img-tipo" src="../../assets/banderas/pr.png" alt="">
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+  
+</ion-content>

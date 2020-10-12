@@ -1,0 +1,33 @@
+<ion-header style="text-align: center;" >
+  <ion-toolbar class="cabecera" >
+    <ion-title text-center>Iniciar Sesión</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content  class="fondo"> 
+  <ion-item color='success'>
+    <ion-select (ionChange)="onChange($event.target.value)" style="color: black;" placeholder="Seleccione usuario: ">
+      <ion-select-option *ngFor="let usuario of usuarios" value={{usuario.id}}>{{usuario.nombre}}</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <div class="logo">
+    
+    <img  src="../../../assets/img/animales.png" alt="">
+    
+  </div>
+  
+  <div class="spiner"><img *ngIf="spiner" src="../../../assets/spiner.gif" alt=""></div>
+ 
+  <ion-item color='success' style="margin-top: 3rem;">
+    <ion-label style="color: brown;" position='floating' >Correo</ion-label>
+    <ion-input  type='text' name='email' [(ngModel)]='mail' ></ion-input> 
+  </ion-item>
+  <ion-item color='success' style="margin-top: 2rem;">
+    <ion-label style="color: brown;" position='floating'>Contraseña</ion-label>
+    <ion-input  type='password' name='contraseña' [(ngModel)]='pass'></ion-input> 
+  </ion-item>
+
+  <ion-button style="margin-top: 2rem;" color='primary' expand='block' (click)='Entrar()'>Entrar</ion-button>
+  <ion-button style="margin-top: 1rem;" color='danger' expand='block' (click)="Limpiar()">Limpiar</ion-button>
+</ion-content>

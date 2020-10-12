@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar class="gold">
+
+    <ion-button color="warning" (click)="AutoLog('invitado')">Invi</ion-button>
+    <ion-button color="success" (click)="AutoLog('anonimo')">Anoni</ion-button>
+    <ion-button color="primary" (click)="AutoLog('admin')">Admin</ion-button>
+    <ion-button color="warning" (click)="AutoLog('tester')">Test</ion-button>
+    <ion-button color="tertiary" (click)="AutoLog('usuario')">Usua</ion-button>
+
+    <!-- <ion-title text-center>Juego Marvel/DC</ion-title> -->
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="background">
+
+  <ion-toolbar class="form login" >
+    <ion-title>Ingreso Usuario</ion-title>
+    <br>
+    <form [formGroup]="form" class="login">
+      <ion-item class="full-width-input">
+        <ion-label position='floating'>Correo</ion-label>
+        <ion-input type="text" formControlName="mail"></ion-input> 
+      </ion-item>
+      <br>
+      <ion-item class="full-width-input">
+        <ion-label position='floating'>Contraseña</ion-label>
+        <ion-input type="password" formControlName="clave"></ion-input> 
+      </ion-item>
+      <br>
+      <ion-button [hidden]="ocultarVerificar"  color='success' *ngIf="logeando"  (click)="Entrar()">Ingresar</ion-button>
+      <ion-button [hidden]="!ocultarVerificar" color="success" *ngIf="logeando"  (click)="Entrar()"><i class="fa fa-spinner fa-spin"></i> Ingresando</ion-button>
+      <br>
+    </form>
+  </ion-toolbar>
+  <div *ngIf="spiner" style="display: flex; flex-direction: row; justify-content: center; margin-top: 10rem;">
+    <img style="z-index: 9999; position: absolute;" src="../../../assets/login.gif" alt="">
+
+  </div>
+</ion-content>
+<ion-footer >
+
+  <ion-toolbar class="goldfooter">
+    <ion-title text-center>Juego Marvel / DC</ion-title>
+   
+
+  </ion-toolbar>
+</ion-footer>

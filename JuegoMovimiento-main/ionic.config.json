@@ -1,0 +1,8 @@
+{
+  "name": "JuegoMovimiento",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}

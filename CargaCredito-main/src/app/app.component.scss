@@ -1,0 +1,49 @@
+// .splash {
+//     position: absolute;
+//     width: 100%;
+//     height: 100%;
+//     z-index: 999;
+//     align-items: center;
+//     justify-content: center;
+//     background-color: #8b918a;
+//     text-align: center;
+//     color:white;
+// }
+.container{
+    
+    background-color: black;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+ 
+ }
+.splash{
+
+   background-color: black;
+ font-size: 5%;
+ font-family: 'Times New Roman', Times, serif;
+ height: 100%;
+ width: 100%;
+ display: flex;
+ flex-direction: column;
+ flex-wrap: wrap;
+ align-items: center;
+ text-align: center;
+ justify-content: space-between;
+}
+
+.imagen{
+   width: 20rem;
+   height: 20rem;
+   border-radius: 100%;
+  
+  }
+
+  h1,h2{
+   font-size: 4rem;
+   color: white;
+}

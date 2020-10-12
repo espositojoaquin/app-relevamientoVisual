@@ -1,0 +1,56 @@
+ion-toolbar{
+    color: white;
+}
+
+.red{
+    --ion-background-color:red;
+    text-align: center;
+    align-content: center;
+}
+
+.blue{
+    --ion-background-color:blue;
+    text-align: center;
+    align-content: center;
+}
+
+.black{
+    --ion-background-color:black;
+    text-align: center;
+    align-content: center;
+}
+
+#container{
+    margin: auto;
+    height: 650px;
+    width: 90%;
+   // outline: 4px solid yellow;
+    position: relative;
+   // background-color: #ccc;
+   background-image: url('../../../assets/Fondo.jpg');
+}
+
+#heroe{
+    width: 30%;
+    position: absolute;
+    top:200px;
+    left: 125px;
+}
+
+countup-timer {
+    color: white;
+    font-weight: bold;
+    font-size: 200%;
+    background-color: black;
+    font-family: ceil($number: 5);
+}
+
+ion-item{
+    --ion-background-color:black;
+}
+
+.Batman{
+    width: 35% !important;
+}
+
+

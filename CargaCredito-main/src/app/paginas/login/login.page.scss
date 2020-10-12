@@ -1,0 +1,47 @@
+/* @import "~@angular/material/prebuilt-themes/indigo-pink.css"; */
+
+ion-content {
+    // max-width: 400px;
+    margin: 2em auto;
+    text-align: center;
+}
+
+.entrar{
+    // background-color: turquoise;
+    height: 45%;
+    border-radius: 10px;
+    width: 88%;
+    text-align: center;
+    margin: auto;
+    --background:transparent;
+}
+ 
+.entrar ion-button{
+    width: 95%;
+}
+
+.form {
+    height: 45%;
+    border-radius: 10px;
+    width: 88%;
+    text-align: center;
+    margin: auto;
+    padding: 19px;
+    --background:transparent;
+}
+.login{
+ 
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+  
+.fondo {
+    /*--ion-background-color: gray;
+    --ion-background-color-rgb: gray;*/
+    --background:url('../../../assets/QR.jpg');
+  }
+  

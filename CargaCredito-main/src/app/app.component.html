@@ -1,0 +1,24 @@
+<div [style.display]="showSplash ? 'flex' : 'none'" class="container" >
+  <div class="splash" >
+    <h1>Joaquín Espósito </h1>
+    
+     <div class="imagenes">
+    
+       
+         <!-- <div class="ld ld-vortex-in infinite" style="background-color: white; border-radius: 100%;"> -->
+         <div [ngClass]="divImg" style="background-color: white; border-radius: 100%;">
+
+         <img class="imagen" src="../assets/QRHome.png" alt="">
+         
+       </div>
+
+     </div>
+      
+
+    <h2>4°B</h2>
+
+  </div>
+</div>
+<ion-app>
+  <ion-router-outlet></ion-router-outlet>
+</ion-app>

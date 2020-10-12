@@ -1,0 +1,64 @@
+<ion-header style="text-align: center;font-size: 4rem;font-family:'Times New Roman', Times, serif;">
+  <ion-toolbar color="primary">
+    <ion-button slot="end" fill="clear" (click)="presentActionSheet()">
+      <ion-icon style="color: aliceblue" name="menu"></ion-icon>
+    </ion-button>
+    <ion-title>Publicaciones</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- <section class="ion-padding">
+    <ion-button [color]="todas?'warning':'light'" (click)="traer(0)">Todas</ion-button>
+    <ion-button [color]="lindas?'success':'light'" (click)="traer(1)">Lindas</ion-button>
+    <ion-button [color]="feas?'danger':'light'" (click)="traer(2)">Feas</ion-button>
+  </section> -->
+  <ion-card *ngFor="let file of files" style="margin-bottom: 2rem; border-radius: 1rem;">
+    <img [src]="file.url" />
+    <ion-card-content>
+      <ion-chip class="button-thumb" style="pointer-events: none;" slot="start" [class]="file.tipo=='linda' ? 'success' : 'danger'">
+        <ion-label [class]="file.tipo=='linda' ? 'success' : 'danger'">{{file.votos.length}}</ion-label>
+      </ion-chip>
+      
+      <ion-button (click)="votar(file.id)">
+        <ion-icon *ngIf="!file.votado" slot="icon-only" name="heart-outline"></ion-icon>
+        <ion-icon color="danger" *ngIf="file.votado" slot="icon-only" name="heart"></ion-icon>
+        <!-- <ion-icon *ngIf="!file.votado" slot="icon-only" name="thumbs-up"></ion-icon>
+        <ion-icon *ngIf="file.votado" slot="icon-only" name="thumbs-down"></ion-icon> -->
+      </ion-button>
+      <hr>
+    </ion-card-content>
+                <ion-card-header>
+                  <ion-card-title style="color: black; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">{{file.email}}</ion-card-title>
+                  <ion-card-subtitle>{{file.created | date:'dd/MM h:mm a'}}</ion-card-subtitle>
+                </ion-card-header>
+  </ion-card>
+
+  <ion-fab id="f-boton-idioma" horizontal="end" vertical="bottom" slot="fixed">
+    <ion-fab-button *ngIf="this.todas" color="dark">
+      <img  id="img-temas" src="../../../assets/ojo.png" alt="">
+      
+    </ion-fab-button>
+
+    <ion-fab-button *ngIf="this.lindas" color="dark">
+      <img *ngIf="this.lindas" id="img-temas" src="../../../assets/linda.png" alt="">
+      
+    </ion-fab-button>
+    <ion-fab-button *ngIf="this.feas" color="dark">
+      <img *ngIf="this.feas" id="img-temas" src="../../../assets/fea.png" alt="">
+      
+    </ion-fab-button>
+    <ion-fab-list side="top">
+      <ion-fab-button color="dark" (click)="traer(0)">
+        <img class="img-tipo" src="../../../assets/ojo.png" alt="">
+      </ion-fab-button>
+      <ion-fab-button color="dark" (click)="traer(1)">
+        <img class="img-tipo" src="../../../assets/linda.png" alt="">
+      </ion-fab-button>
+      <ion-fab-button color="dark" (click)="traer(2)">
+        <img class="img-tipo" src="../../../assets/fea.png" alt="">
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+
+</ion-content>

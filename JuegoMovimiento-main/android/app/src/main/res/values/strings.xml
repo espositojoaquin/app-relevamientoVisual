@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">JuegoMovimiento</string>
+    <string name="title_activity_main">JuegoMovimiento</string>
+    <string name="package_name">juego.movimiento</string>
+    <string name="custom_url_scheme">juego.movimiento</string>
+</resources>

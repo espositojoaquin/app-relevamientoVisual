@@ -1,0 +1,40 @@
+/* @import "~@angular/material/prebuilt-themes/indigo-pink.css"; */
+
+.example-header-image {
+    background-size: cover;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+ion-content {
+    margin: 2em auto;
+    text-align: center;
+}
+.fondo{
+    --background:url('../../../assets/fondoLogin.jpg');
+
+  }
+  .login{
+      border-radius: 2rem;
+      -webkit-box-shadow: 7px 4px 23px -4px rgba(247,242,243,1);
+-moz-box-shadow: 7px 4px 23px -4px rgba(247,242,243,1);
+box-shadow: 7px 4px 23px -4px rgba(247,242,243,1);
+  }
+
+ion-content ion-toolbar {
+    border-radius: 10px;
+    width: 88%;
+    text-align: center;
+    margin: auto;
+    padding: 19px;
+
+    // margin: 0;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+
+    --background: rgb(0, 0, 0);
+}

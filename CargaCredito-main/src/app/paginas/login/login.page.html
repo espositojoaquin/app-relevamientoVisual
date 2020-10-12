@@ -1,0 +1,45 @@
+<ion-header style="text-align: center;">
+  <ion-toolbar color='danger'>
+    <ion-title text-center>Iniciar Sesión</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content class="fondo ">
+  <br >
+  <ion-toolbar class="form" >
+    <br>
+    <form [formGroup]="form" >
+      <ion-item class="full-width-input" style="margin-top: 4rem;">
+        <ion-label position='floating' >Correo</ion-label>
+        <ion-input type="text" formControlName="mail"  ></ion-input> 
+      </ion-item>
+      <br>
+      <ion-item class="full-width-input">
+        <ion-label position='floating' >Contraseña</ion-label>
+        <ion-input type="password" formControlName="clave"  ></ion-input> 
+      </ion-item>
+      <br>
+      <ion-button [hidden]="ocultarVerificar"  style="width: 12rem; margin-top: 2rem;" color='danger' *ngIf="logeando"  (click)="Entrar()">Entrar</ion-button>
+      
+    </form>
+  </ion-toolbar>
+  <div style="height: 3rem;">
+    <img *ngIf="spiner" style="height: 3rem;" src="../../../assets/spiner.gif" alt="">
+
+  </div>
+  <!-- <ion-item-divider></ion-item-divider> -->
+  <ion-toolbar class="entrar"  >
+    <br>
+    <ion-button color="success" *ngIf="logeando"  (click)="AutoLog('admin')"> Ingresar como Admin</ion-button>
+    <br><br>
+    <ion-button color="success" *ngIf="logeando"  (click)="AutoLog('invitado')">Ingresar como Invitado</ion-button>
+    <br><br>
+    <ion-button color="success" *ngIf="logeando"  (click)="AutoLog('usuario')">Ingresar como Usuario</ion-button>
+    <br><br>
+    <ion-button color="success" *ngIf="logeando"  (click)="AutoLog('anonimo')">Ingresar como Anonimo</ion-button>
+    <br><br>
+    <ion-button color="success" *ngIf="logeando"  (click)="AutoLog('tester')">Ingresar como Tester</ion-button>
+  </ion-toolbar>
+</ion-content>

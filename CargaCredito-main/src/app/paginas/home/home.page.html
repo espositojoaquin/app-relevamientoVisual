@@ -1,0 +1,36 @@
+<ion-header style="text-align: center;">
+  <ion-toolbar color="primary">
+    <ion-button slot="end" fill="clear" (click)="logOut()">
+      <ion-icon style="color: aliceblue" name="log-out"></ion-icon>
+    </ion-button>
+    <ion-title>
+      Carga de crédito
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<div class="saldo">
+  <ion-toolbar class="info-saldo"  style="width: 100%;">
+    <ion-label class="ion-text-center" >
+      <h2 style="color: white;"><b>Saldo: {{saldo | currency}}</b></h2>
+    </ion-label>
+  </ion-toolbar>
+
+</div>
+
+<ion-content class="fondo" style="text-align: center;">
+
+ <h2 style="color: green;">Cargar Crédito</h2>
+ <div class="qr">
+   <div id="boton" style="background-color: green; border-radius: 100%; padding: 1rem;" class="qr" (click)="scan()">
+     <img style="background-color: white; border-radius: 100%;"  src="../../../assets/QRHome.png" alt="">
+
+   </div>
+ </div>
+
+  <ion-button style="margin-top: 2rem; height: 4rem;font-size: 2rem;font-weight: bold;font-family: 'Times New Roman', Times, serif; font-style: italic;" color="danger" expand="block" (click)="limpiar()">
+    <ion-icon name="trash" showWhen="core,android,windows"></ion-icon>
+    <span  >Limpiar saldo</span>
+  </ion-button>
+</ion-content>
+
